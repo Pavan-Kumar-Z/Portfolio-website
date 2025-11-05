@@ -287,3 +287,145 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* If your icons are white-only and you want them inverted on dark bg, use this:
 .skill-icon { filter: invert(1) grayscale(1) contrast(1.2); }
 Use only if your source icons are dark and need to be visible on dark background. */
+/* ===== Projects (Vertical Card Grid) ===== */
+.projects-section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Responsive grid: 3 cols → 2 → 1 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  justify-items: center;
+  margin-top: 32px;
+}
+
+/* Project card container */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+}
+
+/* Hover animation */
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Thumbnail area (for square icons or logos) */
+.project-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;                /* makes it perfectly square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.03), rgba(0,0,0,0.2));
+  overflow: hidden;
+  padding: 20px;                      /* add breathing space for icons */
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-media img {
+  width: 80%;                         /* ensures it fits well within the square */
+  height: auto;
+  object-fit: contain;                /* keeps proportions, no cropping */
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); /* gives icons depth */
+}
+
+.project-card:hover .project-media img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5));
+}
+
+/* Project content area */
+.project-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px 26px;
+}
+
+/* Title */
+.project-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Sub-text (tech stack) */
+.project-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #9fb0bd;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Description */
+.project-desc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #d6e3ea;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+/* Buttons row */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-actions .btn {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Subtle lift for button hover */
+.project-actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .projects-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .project-body {
+    padding: 18px 18px 24px;
+  }
+  .project-title {
+    font-size: 18px;
+  }
+  .project-sub,
+  .project-desc {
+    font-size: 13.5px;
+  }
+}

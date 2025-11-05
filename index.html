@@ -51,8 +51,7 @@
 
                 <div class="hero-actions">
                     <a class="btn btn--primary" href="#contact">Get In Touch</a>
-                    <a class="btn btn--outline" href="assets/Resume-Bangalore.pdf" target="_blank"
-                        rel="noopener">Download CV</a>
+                    <a class="btn btn--outline" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
                 </div>
 
 
@@ -92,7 +91,7 @@
                         <span class="skill-label">Node</span>
                     </a>
 
-                     <a class="skill" href="#projects" title="API">
+                    <a class="skill" href="#projects" title="API">
                         <img src="assets/icons/api.png" alt="API icon" class="skill-icon">
                         <span class="skill-label">Rest API</span>
                     </a>
@@ -102,7 +101,7 @@
                         <span class="skill-label">PostGreSQL</span>
                     </a>
 
-                    
+
 
                     <a class="skill" href="#projects" title="PyTorch">
                         <img src="assets/icons/pytorch.png" alt="PyTorch icon" class="skill-icon">
@@ -122,13 +121,108 @@
 
 
                 <!-- short profile summary (from resume) -->
-                <div class="profile-summary"
+               
+            </div>
+        </section>
+
+        <!-- placeholders for upcoming steps -->
+        <section id="projects" class="container projects-section" aria-labelledby="projects-title">
+            <h2 id="projects-title" class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/project-thumbs/solar.png" alt="Energy platform thumbnail">
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">AI-Powered Energy Management & Forecasting</h3>
+                        <p class="project-sub">Full-stack • LSTM forecasting • Vite/React • PostgreSQL • Vercel</p>
+                        <p class="project-desc">
+                            End-to-end platform for tariff & consumption forecasting, anomaly detection and realtime
+                            dashboards. Implemented LSTM forecasting models and deployed frontend + APIs to Vercel.
+                        </p>
+
+                        <div class="project-actions">
+                            <!-- Replace the href value with your real GitHub repo URL -->
+                            <a class="btn btn--outline project-link"
+                                href="https://github.com/Pavan-Kumar-Z/Luminous-TechnoX-Hackathon-Submission-2024" target="_blank"
+                                rel="noopener">GitHub</a>
+                            <a class="btn btn--primary" href="#contact">Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/project-thumbs/quiz.png" alt="Quiz generator thumbnail">
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">AI-Powered Quiz Generator</h3>
+                        <p class="project-sub">Flask APIs • LLM • RAG-ready design • PyMuPDF</p>
+                        <p class="project-desc">
+                            A quiz generation system that parses documents, chunks text token-aware, and generates
+                            high-quality MCQs using a RAG pipeline.
+                        </p>
+
+                        <div class="project-actions">
+                            <a class="btn btn--outline project-link"
+                                href="https://github.com/Pavan-Kumar-Z/AI-Quiz-Generator" target="_blank"
+                                rel="noopener">GitHub</a>
+                            <a class="btn btn--primary" href="#contact">Live</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-media" aria-hidden="true">
+                        <img src="assets/project-thumbs/vision.png" alt="Vision tracking thumbnail">
+                    </div>
+
+                    <div class="project-body">
+                        <h3 class="project-title">Vision Tracking (Eye Tracking)</h3>
+                        <p class="project-sub">PyTorch • OpenCV • CNN regression • Edge inference</p>
+                        <p class="project-desc">
+                            Driver alertness system using CNN-based pupil coordinate regression, trained with PyTorch
+                            and optimized for near real-time inference on edge hardware.
+                        </p>
+
+                        <div class="project-actions">
+                            <a class="btn btn--outline project-link"
+                                href="https://github.com/Pavan-Kumar-Z/Vision-Tracking-Model" target="_blank"
+                                rel="noopener">GitHub</a>
+                            <a class="btn btn--primary" href="#contact">Read more</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- optional view-all projects button -->
+            <div style="margin-top:18px; display:flex; justify-content:center;">
+                <a class="btn btn--outline" href="https://github.com/Pavan-Kumar-Z" target="_blank"
+                    rel="noopener">View all on GitHub</a>
+            </div>
+        </section>
+
+
+        <section id="experience" class="container" style="min-height:360px;padding-top:80px;padding-bottom:80px;">
+            <!-- Step 3 will add detailed experience entries here -->
+        </section>
+
+        <section id="contact" class="container" style="min-height:220px;padding-top:80px;padding-bottom:80px;">
+             <div class="profile-summary"
                     style="margin-top:26px;color:#cfd8df;max-width:820px;margin-left:auto;margin-right:auto;font-weight:300;">
                     <p style="margin:0 0 8px;">
-                        I build full-stack applications and AI/ML systems — from React + Vite frontends and Node/Express
+                        I build full-stack applications and AI/ML systems from React + Vite frontends and Node/Express
                         or Flask backends to model training with PyTorch and deployment on serverless or Vercel
                         platforms. Recent work includes an AI-powered energy forecasting platform and a quiz generation
-                        system combining document parsing with LLM workflows. :contentReference[oaicite:1]{index=1}
+                        system combining document parsing with LLM workflows.
                     </p>
                     <p style="margin:0;font-size:14px;color:#9fb0bd">
                         Based in Bengaluru • <a href="mailto:pavan.kumar.primary@gmail.com"
@@ -139,20 +233,6 @@
                             style="color:#9fb0bd;text-decoration:underline">GitHub</a>
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- placeholders for upcoming steps -->
-        <section id="projects" class="container" style="min-height:320px;padding-top:80px;padding-bottom:80px;">
-            <!-- Step 4 will add project cards here -->
-        </section>
-
-        <section id="experience" class="container" style="min-height:360px;padding-top:80px;padding-bottom:80px;">
-            <!-- Step 3 will add detailed experience entries here -->
-        </section>
-
-        <section id="contact" class="container" style="min-height:220px;padding-top:80px;padding-bottom:80px;">
-            <!-- Step 5 will add contact form / social icons -->
         </section>
     </main>
 
