@@ -1,70 +1,162 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Your Name — Full stack developer. Projects, experience and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Inter:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Your Name — Full stack developer. Projects, experience and contact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Inter:wght@600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo"> <!-- replace with your SVG or image -->
-        <a href="#main" aria-label="Home">YourLogo</a>
-      </div>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="#main" aria-label="Home">Pavan Kumar</a>
+            </div>
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
+            <nav class="nav" aria-label="Main navigation" id="navMenu">
+                <a href="#main">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="avatar-wrap">
-          <div class="avatar-bg"></div>
-          <img src="assets/avatar.jpg" alt="Your Name" class="avatar">
         </div>
+    </header>
 
-        <h1 class="hero-title">
-          I do code and <span class="accent">make content about it!</span>
-        </h1>
+    <main id="main">
+        <!-- HERO / PROFILE -->
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="avatar-wrap">
+                    <div class="avatar-bg" aria-hidden="true"></div>
+                    <img src="assets/avatar.jpg" alt="Pavan Kumar — profile photo" class="avatar">
+                </div>
 
-        <p class="hero-desc">
-          I am a seasoned full-stack software engineer with hands-on experience building scalable web applications and beautiful user experiences.
-        </p>
+                <h1 class="hero-title">
+                    Hi — I'm <span class="accent">Pavan Kumar</span>
+                </h1>
 
-        <div class="hero-actions">
-          <a class="btn btn--primary" href="#contact">Get In Touch</a>
-          <a class="btn btn--outline" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
-        </div>
+                <p class="hero-desc">
+                    Full-Stack Software Engineer with hands-on experience building scalable web apps and production
+                    AI/ML solutions.
+                    Coursework and projects in Machine Learning, Deep Learning, Generative AI and NLP.
+                </p>
 
-        <div class="skill-logos" aria-hidden="true">
-          <!-- placeholders for small circular logos -->
-          <span class="logo-circle">JS</span>
-          <span class="logo-circle">Node</span>
-          <span class="logo-circle">HTML</span>
-          <span class="logo-circle">CSS</span>
-          <span class="logo-circle">React</span>
-        </div>
-      </div>
-    </section>
+                <div class="hero-actions">
+                    <a class="btn btn--primary" href="#contact">Get In Touch</a>
+                    <a class="btn btn--outline" href="assets/Resume-Bangalore.pdf" target="_blank"
+                        rel="noopener">Download CV</a>
+                </div>
 
-    <!-- Projects, Experience, Contact sections will be added in later steps -->
-    <section id="projects"></section>
-    <section id="experience"></section>
-    <section id="contact"></section>
-  </main>
 
-  <script src="js/main.js"></script>
+                <div class="skill-logos" aria-label="Skills">
+                    <a class="skill" href="#projects" aria-hidden="false" title="c++">
+                        <img src="assets/icons/c++.png" alt="c++ icon" class="skill-icon">
+                        <span class="skill-label">C++</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="oop">
+                        <img src="assets/icons/oop.png" alt="oop icon" class="skill-icon">
+                        <span class="skill-label">oop</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="js">
+                        <img src="assets/icons/js.png" alt="js icon" class="skill-icon">
+                        <span class="skill-label">Javascript</span>
+                    </a>
+
+                    <a class="skill" href="#projects" title="Python">
+                        <img src="assets/icons/python.png" alt="Python icon" class="skill-icon">
+                        <span class="skill-label">Python</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="htmlcss">
+                        <img src="assets/icons/htmlcss.png" alt="htmlcss icon" class="skill-icon">
+                        <span class="skill-label">HTML CSS</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="React">
+                        <img src="assets/icons/react.png" alt="React icon" class="skill-icon">
+                        <span class="skill-label">React</span>
+                    </a>
+
+                    <a class="skill" href="#projects" title="Node.js">
+                        <img src="assets/icons/nodejs.png" alt="Node.js icon" class="skill-icon">
+                        <span class="skill-label">Node</span>
+                    </a>
+
+                     <a class="skill" href="#projects" title="API">
+                        <img src="assets/icons/api.png" alt="API icon" class="skill-icon">
+                        <span class="skill-label">Rest API</span>
+                    </a>
+
+                    <a class="skill" href="#projects" title="SQL">
+                        <img src="assets/icons/sql.png" alt="SQL icon" class="skill-icon">
+                        <span class="skill-label">PostGreSQL</span>
+                    </a>
+
+                    
+
+                    <a class="skill" href="#projects" title="PyTorch">
+                        <img src="assets/icons/pytorch.png" alt="PyTorch icon" class="skill-icon">
+                        <span class="skill-label">PyTorch</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="ai">
+                        <img src="assets/icons/ai.png" alt="ai icon" class="skill-icon">
+                        <span class="skill-label">LLM</span>
+                    </a>
+
+                    <a class="skill" href="#projects" aria-hidden="false" title="deep-learning">
+                        <img src="assets/icons/deep-learning.png" alt="deep-learning icon" class="skill-icon">
+                        <span class="skill-label">Deep Learning</span>
+                    </a>
+                </div>
+
+
+                <!-- short profile summary (from resume) -->
+                <div class="profile-summary"
+                    style="margin-top:26px;color:#cfd8df;max-width:820px;margin-left:auto;margin-right:auto;font-weight:300;">
+                    <p style="margin:0 0 8px;">
+                        I build full-stack applications and AI/ML systems — from React + Vite frontends and Node/Express
+                        or Flask backends to model training with PyTorch and deployment on serverless or Vercel
+                        platforms. Recent work includes an AI-powered energy forecasting platform and a quiz generation
+                        system combining document parsing with LLM workflows. :contentReference[oaicite:1]{index=1}
+                    </p>
+                    <p style="margin:0;font-size:14px;color:#9fb0bd">
+                        Based in Bengaluru • <a href="mailto:pavan.kumar.primary@gmail.com"
+                            style="color:#9fb0bd;text-decoration:underline">pavan.kumar.primary@gmail.com</a> • <a
+                            href="https://www.linkedin.com/in/pavan-kumar-8901a5261/" target="_blank"
+                            style="color:#9fb0bd;text-decoration:underline">LinkedIn</a> • <a
+                            href="https://github.com/Pavan-Kumar-Z" target="_blank"
+                            style="color:#9fb0bd;text-decoration:underline">GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- placeholders for upcoming steps -->
+        <section id="projects" class="container" style="min-height:320px;padding-top:80px;padding-bottom:80px;">
+            <!-- Step 4 will add project cards here -->
+        </section>
+
+        <section id="experience" class="container" style="min-height:360px;padding-top:80px;padding-bottom:80px;">
+            <!-- Step 3 will add detailed experience entries here -->
+        </section>
+
+        <section id="contact" class="container" style="min-height:220px;padding-top:80px;padding-bottom:80px;">
+            <!-- Step 5 will add contact form / social icons -->
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
