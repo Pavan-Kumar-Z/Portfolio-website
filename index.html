@@ -10,11 +10,61 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header + nav will be added in Step 2 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"> <!-- replace with your SVG or image -->
+        <a href="#main" aria-label="Home">YourLogo</a>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+    </div>
+  </header>
+
   <main id="main">
-    <!-- Hero/Profile will be added in Step 2 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="avatar-wrap">
+          <div class="avatar-bg"></div>
+          <img src="assets/avatar.jpg" alt="Your Name" class="avatar">
+        </div>
+
+        <h1 class="hero-title">
+          I do code and <span class="accent">make content about it!</span>
+        </h1>
+
+        <p class="hero-desc">
+          I am a seasoned full-stack software engineer with hands-on experience building scalable web applications and beautiful user experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#contact">Get In Touch</a>
+          <a class="btn btn--outline" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+
+        <div class="skill-logos" aria-hidden="true">
+          <!-- placeholders for small circular logos -->
+          <span class="logo-circle">JS</span>
+          <span class="logo-circle">Node</span>
+          <span class="logo-circle">HTML</span>
+          <span class="logo-circle">CSS</span>
+          <span class="logo-circle">React</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects, Experience, Contact sections will be added in later steps -->
+    <section id="projects"></section>
+    <section id="experience"></section>
+    <section id="contact"></section>
   </main>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
