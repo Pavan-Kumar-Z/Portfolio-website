@@ -125,3 +125,53 @@ document.addEventListener('DOMContentLoaded', () => {
     resetBtn.addEventListener('click', () => { form.reset(); status.textContent = ''; });
   }
 });
+
+
+// Theme toggle: persistent dark / light mode (uses .light-theme on <html>)
+(function(){
+  const THEME_KEY = 'site-theme'; // value: 'light' or 'dark'
+  const root = document.documentElement; // <html>
+  const toggle = document.getElementById('themeToggle');
+
+  if(!toggle) return;
+
+  // Apply theme: pass 'light' or 'dark'
+  function applyTheme(theme) {
+    if(theme === 'light') {
+      root.classList.add('light-theme');
+      toggle.setAttribute('aria-pressed', 'true');
+    } else {
+      root.classList.remove('light-theme');
+      toggle.setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  // Decide initial theme: localStorage -> user preference -> default dark
+  function getInitialTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    if(saved === 'light' || saved === 'dark') return saved;
+    // respect system preference
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    return prefersLight ? 'light' : 'dark';
+  }
+
+  // initialize
+  const initial = getInitialTheme();
+  applyTheme(initial);
+
+  // click handler toggles theme
+  toggle.addEventListener('click', () => {
+    const isLight = root.classList.contains('light-theme');
+    const next = isLight ? 'dark' : 'light';
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  });
+
+  // keyboard: allow Space or Enter to toggle when focused
+  toggle.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle.click();
+    }
+  });
+})();

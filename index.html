@@ -27,6 +27,14 @@
                 <a href="#contact">Contact</a>
             </nav>
 
+            <!-- Theme toggle (put after nav inside .header-inner) -->
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false"
+                title="Toggle dark / light theme">
+                <span class="theme-icon theme-icon--sun" aria-hidden="true">☀️</span>
+                <span class="theme-icon theme-icon--moon" aria-hidden="true">🌙</span>
+            </button>
+
+
         </div>
     </header>
 
@@ -271,61 +279,69 @@
 
 
         <section id="contact" class="container contact-section" aria-labelledby="contact-title">
-  <h2 id="contact-title" class="section-title">Contact</h2>
+            <h2 id="contact-title" class="section-title">Contact</h2>
 
-  <!-- Centered intro (takes full width, content centered) -->
-  <div class="contact-center">
-    <p class="contact-intro">
-      Want to collaborate on a Full-Stack or AI/ML project? I’m open to freelancing and interviews — drop a message.
-    </p>
+            <!-- Centered intro (takes full width, content centered) -->
+            <div class="contact-center">
+                <p class="contact-intro">
+                    Want to collaborate on a Full-Stack or AI/ML project? I’m open to freelancing and interviews — drop
+                    a message.
+                </p>
 
-    <p class="contact-email">
-      <strong>Email:</strong>
-      <a class="contact-link" href="mailto:pavan.kumar.primary@gmail.com">pavan.kumar.primary@gmail.com</a>
-    </p>
+                <p class="contact-email">
+                    <strong>Email:</strong>
+                    <a class="contact-link"
+                        href="mailto:pavan.kumar.primary@gmail.com">pavan.kumar.primary@gmail.com</a>
+                </p>
 
-    <div class="social-row" aria-label="Social links">
-      <a href="https://github.com/Pavan-Kumar-Z" class="social" target="_blank" rel="noopener">
-        <img src="assets/icons/github.png" alt="GitHub" class="social-icon">
-      </a>
-      <a href="https://www.linkedin.com/in/pavan-kumar-8901a5261/" class="social" target="_blank" rel="noopener">
-        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
-      </a>
-      <a href="https://www.instagram.com/_pawan__kumar____?igsh=MW5mOHY1aTV3YXd4aQ==" class="social" target="_blank" rel="noopener">
-        <img src="assets/icons/instagram.png" alt="Instagram" class="social-icon">
-      </a>
-    </div>
-  </div>
+                <div class="social-row" aria-label="Social links">
+                    <a href="https://github.com/Pavan-Kumar-Z" class="social" target="_blank" rel="noopener">
+                        <img src="assets/icons/github.png" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pavan-kumar-8901a5261/" class="social" target="_blank"
+                        rel="noopener">
+                        <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/_pawan__kumar____?igsh=MW5mOHY1aTV3YXd4aQ==" class="social"
+                        target="_blank" rel="noopener">
+                        <img src="assets/icons/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
 
-  <!-- Form below the centered intro -->
-  <div class="contact-form-wrap">
-    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" aria-label="Contact form">
-      <input type="hidden" name="form-name" value="contact">
-      <div class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label></div>
+            <!-- Form below the centered intro -->
+            <div class="contact-form-wrap">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                    class="contact-form" aria-label="Contact form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <div class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                    </div>
 
-      <label for="name" class="visually-hidden">Your name</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required>
+                    <label for="name" class="visually-hidden">Your name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
 
-      <label for="email" class="visually-hidden">Your email</label>
-      <input id="email" name="email" type="email" placeholder="Your email" required>
+                    <label for="email" class="visually-hidden">Your email</label>
+                    <input id="email" name="email" type="email" placeholder="Your email" required>
 
-      <label for="message" class="visually-hidden">Message</label>
-      <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or question..." required></textarea>
+                    <label for="message" class="visually-hidden">Message</label>
+                    <textarea id="message" name="message" rows="6"
+                        placeholder="Tell me about your project or question..." required></textarea>
 
-      <div class="form-actions">
-        <button type="submit" class="btn btn--primary">Send message</button>
-        <button type="button" id="contactFormReset" class="btn btn--outline">Reset</button>
-      </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Send message</button>
+                        <button type="button" id="contactFormReset" class="btn btn--outline">Reset</button>
+                    </div>
 
-      <div id="contactStatus" role="status" aria-live="polite" class="contact-status"></div>
-    </form>
-    <noscript>
-      <p style="color:#c5c5c5;font-size:14px;margin-top:12px;">
-        If the form does not work, please <a href="mailto:pavan.kumar.primary@gmail.com">email me directly</a>.
-      </p>
-    </noscript>
-  </div>
-</section>
+                    <div id="contactStatus" role="status" aria-live="polite" class="contact-status"></div>
+                </form>
+                <noscript>
+                    <p style="color:#c5c5c5;font-size:14px;margin-top:12px;">
+                        If the form does not work, please <a href="mailto:pavan.kumar.primary@gmail.com">email me
+                            directly</a>.
+                    </p>
+                </noscript>
+            </div>
+        </section>
 
 
     </main>
