@@ -175,3 +175,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
+
+// Typing animation for the .accent span (Pavan Kumar)
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.hero-title .accent');
+  if (!el) return;
+
+  const fullText = el.textContent.trim(); // "Pavan Kumar"
+  const typingDelay = 200;    // ms between characters
+  const pauseAfterFull = 10000; // ms to wait after full name displayed (10s)
+  const pauseBeforeRestart = 600; // short pause before restarting
+
+  // clear any initial content and prepare
+  el.textContent = '';
+  el.setAttribute('aria-live', 'polite');
+
+  // helper: sleep
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+  async function runTypingLoop() {
+    // add caret styling
+    el.classList.add('type-caret');
+
+    while (true) {
+      // type characters one by one
+      for (let i = 1; i <= fullText.length; i++) {
+        el.textContent = fullText.slice(0, i);
+        await sleep(typingDelay);
+      }
+
+      // fully typed — keep it visible for pauseAfterFull
+      await sleep(pauseAfterFull);
+
+      // clear instantly (you can choose to animate deletion if you prefer)
+      el.textContent = '';
+
+      // small pause before typing again
+      await sleep(pauseBeforeRestart);
+    }
+  }
+
+  runTypingLoop().catch(err => console.error('Typing animation error:', err));
+});

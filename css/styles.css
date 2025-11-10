@@ -97,6 +97,7 @@ video {
   display: flex;
   gap: 26px;
   align-items: center;
+  padding-left: 425px;
 }
 
 .nav a {
@@ -177,7 +178,7 @@ video {
 }
 
 .hero-title .accent {
-  background: linear-gradient(90deg, #FF8660, #8000FF);
+  background: linear-gradient(90deg, #ef6034, #8000FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -744,7 +745,7 @@ button {
   --muted: #9fb0bd;
   --text: #e6eef8;
   --card: rgba(255,255,255,0.02);
-  --accent: #ff8660;
+  --accent: #f74b16;
   --accent-2: #8000ff;
   --header-bg: rgba(34,34,34,0.88);
   --border: rgba(255,255,255,0.03);
@@ -810,4 +811,23 @@ body {
 /* small screens: reduce size */
 @media (max-width: 600px) {
   .theme-toggle { width:40px; height:34px; }
+}
+
+
+/* Typing caret */
+.accent.type-caret::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 6px;
+  vertical-align: middle;
+  background: currentColor;
+  animation: blink-caret 1s steps(1) infinite;
+  border-radius: 1px;
+  transform-origin: center;
+}
+
+@keyframes blink-caret {
+  50% { opacity: 0; }
 }
