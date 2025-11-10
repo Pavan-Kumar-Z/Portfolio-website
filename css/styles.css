@@ -658,3 +658,113 @@ Use only if your source icons are dark and need to be visible on dark background
         font-size: 13.5px;
     }
 }
+
+/* ---- Contact: centered intro + form below ---- */
+.contact-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* center block that occupies full width and centers content */
+.contact-center {
+  max-width: 850px;
+  margin: 0 auto 28px;     /* centers and provides space before form */
+  text-align: center;
+  padding: 28px 18px;
+}
+
+.contact-intro {
+  font-size: 18px;
+  font-weight: 300;
+  color: #cfd8df;
+  margin: 0 0 12px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-email {
+  margin: 0;
+  font-size: 15px;
+  color: #9fb0bd;
+  margin-bottom: 14px;
+}
+
+/* styling for the email link */
+.contact-link {
+  color: #9fb0bd;
+  text-decoration: underline;
+  margin-left: 8px;
+}
+
+/* social icons centered below email */
+.social-row {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.social {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.02);
+  text-decoration: none;
+}
+.social-icon { width:22px; height:22px; display:block; filter: none; }
+
+/* form wrapper centered and narrower than intro width */
+.contact-form-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 6px 12px;
+}
+
+/* form controls */
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  background: rgba(255,255,255,0.01);
+  padding:18px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: #9fb0bd; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: rgba(128,0,255,0.28); box-shadow: 0 6px 18px rgba(128,0,255,0.06); }
+
+/* actions */
+.form-actions { display:flex; gap:10px; margin-top:6px; justify-content:flex-start; }
+.contact-status { margin-top:12px; color:#cfd8df; font-size:14px; min-height:20px; }
+
+/* visually hidden helper */
+.visually-hidden { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+
+/* hide the honeypot on layout */
+.hidden { display:none !important; }
+
+/* responsive: tighten spacing on mobile */
+@media (max-width: 780px) {
+  .contact-center { padding: 18px 12px; }
+  .contact-intro { font-size: 16px; }
+  .contact-form-wrap { padding: 0 8px; }
+  .form-actions { flex-direction: column; gap: 8px; }
+}

@@ -60,3 +60,68 @@ if(navToggle){
   window.addEventListener('resize', updateCollapse);
   document.addEventListener('DOMContentLoaded', updateCollapse);
 })();
+
+
+// Contact form handler (Netlify-friendly + fetch)
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('contactStatus');
+  const resetBtn = document.getElementById('contactFormReset');
+
+  if(!form) return;
+
+  // Helper to serialize form data for fetch
+  function encodeFormData(data) {
+    return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // simple client-side validation
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+    if(!name || !email || !message) {
+      status.textContent = 'Please fill all fields.';
+      return;
+    }
+
+    // honeypot check
+    if(form['bot-field'] && form['bot-field'].value) {
+      status.textContent = 'Bot detected.';
+      return;
+    }
+
+    status.textContent = 'Sending…';
+
+    // If using Netlify forms: POST to current page with form name
+    const formData = {
+      'form-name': form.getAttribute('name'),
+      name, email, message
+    };
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData(formData)
+      });
+
+      if(response.ok) {
+        status.textContent = 'Thanks — message sent!';
+        form.reset();
+      } else {
+        // fallback to mailto if server returns error
+        status.textContent = 'Unable to send — please email me directly.';
+      }
+    } catch (err) {
+      console.error(err);
+      status.textContent = 'Network error — try emailing directly.';
+    }
+  });
+
+  if(resetBtn) {
+    resetBtn.addEventListener('click', () => { form.reset(); status.textContent = ''; });
+  }
+});
